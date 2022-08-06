@@ -1,12 +1,12 @@
 import React from "react";
-import ShowMap from "./components/Map";
+import ShowMap from "./Components/Map";
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes,Navigate } from "react-router-dom";
 
 function App() {
-  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_OG5OaGTGRirg0y6bZpWuS9Y2VgAH9&ipAddress`;
-  const [ipInfo, setIpInfo] = useState([]);
+  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_MY_API_KEY}&ipAddress`;
+  const [ipInfo, setIpInfo] = useState(false);
   const [queryString, setQueryString] = useState(url);
   const [data, setData] = useState([])
   const [error, setError] = useState("");
@@ -39,12 +39,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{ipInfo.ip} </h1>
-      {/* <Routes>
+      
+      
+ 
+ 
+      <Routes>
         <Route path="/" element={<ShowMap ipInfo={ipInfo} />} />
-         <Route path="/" element={<Countries data={data} setData={setData}/>} />
-        </Routes> */}
+         {/* <Route path="/" element={<Countries data={data} setData={setData}/>} /> */}
+        </Routes> 
         
+      
       
     </div>
   );
