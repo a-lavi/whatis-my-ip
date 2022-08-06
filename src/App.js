@@ -1,5 +1,5 @@
 import React from "react";
-import ShowMap from "./Components/Map";
+import ShowMap from "./Components/ShowMap";
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Route, Routes,Navigate } from "react-router-dom";
