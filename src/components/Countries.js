@@ -1,5 +1,5 @@
 import react, { useState, useEffect } from "react";
-
+import ShowCountries from './ShowCountries'
 const Countries = ({ country }) => {
   const [data, setData] = useState([]);
   console.log(country);
@@ -44,6 +44,7 @@ const Countries = ({ country }) => {
                 country(code: "${countryCode}") {
                   name, 
                   phone,
+                  capital,
                   continent {name},
                   emoji,
                   native,
@@ -59,8 +60,7 @@ const Countries = ({ country }) => {
   return (
     
       <div>
-        {country
-        }
+      <ShowCountries data={data}/>
       </div>
     
   );
