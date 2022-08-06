@@ -3,7 +3,13 @@ import { Map, Marker } from "pigeon-maps"
 import Countries from './Countries';
 import Button from '@material-ui/core/Button';
 
+
+import Button from '@mui/material/Button';
+import { DateTime } from "luxon";
+
 const ShowMap = ({ipInfo}) => {
+  const now = DateTime.now();
+  console.log(now)
   const [showInfo, setShowInfo] = useState(false);
   const clickHandler = ()=> {
     setShowInfo (!showInfo)
@@ -27,7 +33,12 @@ IPv4: {ipInfo.ip}
   height="120"
   alt="South Africa"></img>
   <div className="searchflex">
+
           
+
+          <div>Date: {`${now.year}/${now.month}/${now.day}`}</div>
+          <div>Time: {`${now.hour}:${now.minute}`}</div>
+
           <Button variant="contained" to="/search" className="searchButton" onClick={clickHandler}>More Info</Button>
           </div>
           <div>
