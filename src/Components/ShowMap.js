@@ -1,6 +1,8 @@
 import React ,{useState}from 'react'
 import { Map, Marker } from "pigeon-maps"
 import Countries from './Countries';
+import Button from '@material-ui/core/Button';
+
 const ShowMap = ({ipInfo}) => {
   const [showInfo, setShowInfo] = useState(false);
   const clickHandler = ()=> {
@@ -26,12 +28,12 @@ IPv4: {ipInfo.ip}
   alt="South Africa"></img>
   <div className="searchflex">
           
-          <button to="/search" className="searchButton" onClick={clickHandler}>More Info</button>
+          <Button variant="contained" to="/search" className="searchButton" onClick={clickHandler}>More Info</Button>
           </div>
           <div>
             <Countries show={showInfo}country={ipInfo.location.country}/>
           </div>
-        <Map height={300} defaultCenter={[ipInfo.location.lat, ipInfo.location.lng]} defaultZoom={11}>
+        <Map height={350} width={600} defaultCenter={[ipInfo.location.lat, ipInfo.location.lng]} defaultZoom={11}>
       <Marker width={50} anchor={[ipInfo.location.lat, ipInfo.location.lng]} />
     </Map>
     </div>
