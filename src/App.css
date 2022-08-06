@@ -1,3 +1,8 @@
+.Headerflex{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
 .App {
   text-align: center;
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import ShowMap from "./Components/ShowMap";
 import "./App.css";
-import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/';
 import Footer from "./Components/Footer.js"
-
+import Header from "./Components/Header.js"
 import { useState, useEffect } from "react";
-import { Route, Routes,Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 function App() {
   const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.REACT_APP_MY_API_KEY}&ipAddress`;
@@ -45,7 +45,7 @@ function App() {
       
       
  
-      
+      <Header />
       <Routes>
         <Route path="/" element={<ShowMap ipInfo={ipInfo} />} />
          {/* <Route path="/" element={<Countries data={data} setData={setData}/>} /> */}

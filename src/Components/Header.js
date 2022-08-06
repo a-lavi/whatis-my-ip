@@ -1,9 +1,11 @@
-import AppBar from '@mui/material/AppBar';
-
 function Header(){
     return(
-<p> test</p>
+    <div className="Headerflex">
+        <p>Home</p>
+        <p>Contact</p>
+        <p>Help</p>
+
+    </div>
     )
 }
-
-default export Header;
+export default Header;
